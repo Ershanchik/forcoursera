@@ -3,3 +3,27 @@
 @media(max-width:1060px){.header-action{display:none}.main-nav{gap:17px}.hero-grid{gap:28px}.skill-grid{grid-template-columns:repeat(3,1fr)}.hero-art{transform:scale(.92)}}
 @media(max-width:760px){.site-header{height:auto;min-height:80px}.header-inner{flex-wrap:wrap;padding-top:15px;padding-bottom:13px;gap:11px}.main-nav{order:3;width:100%;justify-content:space-between;gap:9px;overflow-x:auto;padding-bottom:2px}.main-nav a{font-size:11px;white-space:nowrap}.section-space{padding:55px 0}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:350px;transform:scale(.9);margin-top:-30px}.hero h1{font-size:clamp(44px,11vw,64px)}.section-heading{align-items:start;flex-direction:column;gap:8px}.section-heading h2{font-size:33px}.skill-grid{grid-template-columns:repeat(3,1fr)}.project-grid{grid-template-columns:1fr}.recommendations-grid{grid-template-columns:1fr}.recommendation-form-panel{grid-template-columns:1fr;gap:13px;padding:25px}}
 @media(max-width:480px){.container{padding:0 18px}.hero-facts{gap:12px}.hero-facts>div{padding-right:12px}.hero-facts span{font-size:9px}.code-body{font-size:10px}.hero-art{min-height:270px;transform:scale(.77);margin:-35px -30px -40px}.skill-grid{grid-template-columns:repeat(2,1fr);gap:10px}.skill-card{min-height:166px;padding:17px 8px}.skill-logo{height:55px;width:55px;margin-bottom:13px}.footer-inner{flex-direction:column;justify-content:center;text-align:center;gap:6px}.home-button{right:14px;bottom:14px;width:47px;height:47px}}
+/* Coursera portfolio rubric selectors; retain the existing visual system. */
+.profile_name {
+  display: inline-block;
+  color: #f8f7ff;
+  font-size: 16px;
+  background: #1d2538;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+.profile_name .brand-subtitle { color: #cbc5ee; }
+.topmenu:hover { font-weight: bold; text-decoration: underline; }
+.main-nav.topmenu:hover { font-weight: inherit; text-decoration: none; }
+.profile-image {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #e4dffd;
+  border-radius: 22px;
+  margin-bottom: 15px;
+  background: #f2efff;
+  box-shadow: 0 8px 22px rgba(105,84,216,.12);
+}
+.skill img.skill-logo { display: block; object-fit: contain; background: transparent; }
