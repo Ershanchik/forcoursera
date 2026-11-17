@@ -13,13 +13,13 @@
     <div class="header-inner container">
       <a class="brand" href="#top" aria-label="Erulan Baimbet — Home">
         <span class="brand-mark">EB<span class="brand-dot">.</span></span>
-        <span class="brand-label">Erulan Baimbet<span class="brand-subtitle">Software Developer</span></span>
+        <span class="brand-label profile_name">Erulan Baimbet<span class="brand-subtitle">Software Developer</span></span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#about-me">About Me</a>
-        <a href="#projects">Project Details</a>
-        <a href="#skills">Skills</a>
-        <a href="#recommendations">Recommendations</a>
+      <nav class="main-nav topmenu" aria-label="Main navigation">
+        <a class="topmenu" href="#about-me">About Me</a>
+        <a class="topmenu" href="#projects">Project Details</a>
+        <a class="topmenu" href="#skills">Skills</a>
+        <a class="topmenu" href="#recommendations">Recommendations</a>
       </nav>
       <a class="header-action" href="#projects">View Work <span aria-hidden="true">↗</span></a>
     </div>
@@ -30,6 +30,7 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="eyebrow"><span class="status-pulse"></span> Building useful digital experiences</div>
+          <img class="profile-image" src="assets/profile.svg" alt="Personalized Erulan Baimbet profile illustration" width="80" height="80">
           <p class="hero-overline">HELLO, I'M</p>
           <h1 id="hero-title">Erulan <span>Baimbet.</span></h1>
           <p class="hero-role">Software Engineering Student <span class="role-divider">/</span> Developer</p>
@@ -72,12 +73,12 @@
       <div class="container">
         <div class="section-heading"><div><span class="section-kicker">01 / WHAT I KNOW</span><h2 id="skills-title">My <em>Skills</em></h2></div><p>A combination of languages, tools, and technologies I use to build projects.</p></div>
         <div class="skill-grid">
-          <article class="skill-card"><div class="skill-logo skill-html" aria-hidden="true"><span>5</span></div><h3>HTML5</h3><p>Semantic structure</p></article>
-          <article class="skill-card"><div class="skill-logo skill-css" aria-hidden="true"><span>3</span></div><h3>CSS3</h3><p>Responsive layouts</p></article>
-          <article class="skill-card"><div class="skill-logo skill-js" aria-hidden="true"><span>JS</span></div><h3>JavaScript</h3><p>Interactive interfaces</p></article>
-          <article class="skill-card"><div class="skill-logo skill-java" aria-hidden="true"><span>J</span></div><h3>Java</h3><p>Object-oriented design</p></article>
-          <article class="skill-card"><div class="skill-logo skill-swift" aria-hidden="true"><span>↗</span></div><h3>Swift</h3><p>iOS app development</p></article>
-          <article class="skill-card"><div class="skill-logo skill-git" aria-hidden="true"><span>⌁</span></div><h3>Git & GitHub</h3><p>Version control</p></article>
+          <article class="skill-card skill"><img class="skill-logo skill-html" src="assets/html5.svg" alt="HTML logo" loading="lazy"><h3>HTML5</h3><p>Semantic structure</p></article>
+          <article class="skill-card skill"><img class="skill-logo skill-css" src="assets/css3.svg" alt="CSS logo" loading="lazy"><h3>CSS3</h3><p>Responsive layouts</p></article>
+          <article class="skill-card skill"><img class="skill-logo skill-js" src="assets/javascript.svg" alt="JS logo" loading="lazy"><h3>JavaScript</h3><p>Interactive interfaces</p></article>
+          <article class="skill-card skill"><img class="skill-logo skill-java" src="assets/java.svg" alt="JAVA logo" loading="lazy"><h3>Java</h3><p>Object-oriented design</p></article>
+          <article class="skill-card skill"><img class="skill-logo skill-swift" src="assets/swift.svg" alt="SWIFT logo" loading="lazy"><h3>Swift</h3><p>iOS app development</p></article>
+          <article class="skill-card skill"><img class="skill-logo skill-git" src="assets/git.svg" alt="GIT logo" loading="lazy"><h3>Git & GitHub</h3><p>Version control</p></article>
         </div>
       </div>
     </section>
@@ -97,9 +98,9 @@
       <div class="container">
         <div class="section-heading"><div><span class="section-kicker">03 / KIND WORDS</span><h2 id="recommendations-title">Recommendations</h2></div><p>Example recommendations illustrating the portfolio feedback section.</p></div>
         <div class="recommendations-grid" id="recommendations-list" aria-live="polite">
-          <blockquote class="recommendation-card"><span class="quote-mark" aria-hidden="true">“</span><p>Erulan approaches challenging programming problems carefully and explains technical decisions in a clear, practical way.</p><footer>— Project teammate</footer></blockquote>
-          <blockquote class="recommendation-card"><span class="quote-mark" aria-hidden="true">“</span><p>He pays attention to both the functionality and appearance of web pages, and actively improves his work from feedback.</p><footer>— Web project collaborator</footer></blockquote>
-          <blockquote class="recommendation-card"><span class="quote-mark" aria-hidden="true">“</span><p>His willingness to learn new tools and work through complex bugs makes collaboration smooth and productive.</p><footer>— Study group member</footer></blockquote>
+          <blockquote class="recommendation-card recommendation"><span class="quote-mark" aria-hidden="true">“</span><p>Erulan approaches challenging programming problems carefully and explains technical decisions in a clear, practical way.</p><footer>— Project teammate</footer></blockquote>
+          <blockquote class="recommendation-card recommendation"><span class="quote-mark" aria-hidden="true">“</span><p>He pays attention to both the functionality and appearance of web pages, and actively improves his work from feedback.</p><footer>— Web project collaborator</footer></blockquote>
+          <blockquote class="recommendation-card recommendation"><span class="quote-mark" aria-hidden="true">“</span><p>His willingness to learn new tools and work through complex bugs makes collaboration smooth and productive.</p><footer>— Study group member</footer></blockquote>
         </div>
         <div class="recommendation-form-panel"><div class="form-intro"><span class="section-kicker">LEAVE YOUR THOUGHTS</span><h3>Add a Recommendation</h3><p>Share a short message. Your recommendation will appear above after submission.</p></div><form id="recommendation-form"><label for="recommendation-name">Your name <span>(optional)</span></label><input id="recommendation-name" name="name" type="text" maxlength="60" placeholder="Your name"><label for="recommendation-text">Your recommendation</label><textarea id="recommendation-text" name="recommendation" minlength="5" maxlength="500" rows="4" required placeholder="Write your recommendation here..."></textarea><button class="button button-primary" type="submit">Submit Recommendation <span aria-hidden="true">→</span></button></form></div>
       </div>
@@ -107,7 +108,7 @@
   </main>
 
   <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Erulan Baimbet · Built with HTML, CSS & JavaScript</span><a href="#top">Back to top ↑</a></div></footer>
-  <a href="#top" class="home-button" aria-label="Back to top / Home" title="Back to top"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 11 9-8 9 8M5 10v10h14V10M9 20v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <a href="#top" class="home-button iconbutton" aria-label="Back to top / Home" title="Back to top"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 11 9-8 9 8M5 10v10h14V10M9 20v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 
   <div class="popup-backdrop" id="popup-backdrop" hidden>
     <div class="popup" role="alertdialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-text"><div class="popup-check" aria-hidden="true">✓</div><h3 id="popup-title">Thank you!</h3><p id="popup-text">Your recommendation has been added successfully.</p><button id="popup-close" class="button button-primary" type="button">OK</button></div>
