@@ -8,9 +8,9 @@ const recommendationText = document.getElementById('recommendation-text');
 const recommendationName = document.getElementById('recommendation-name');
 
 // Create elements instead of using innerHTML for user-provided text.
-function addRecommendation(message, author = 'Portfolio visitor') {
+function addRecommendation(message, author = 'Portfolio visitor', notify = false) {
   const card = document.createElement('blockquote');
-  card.className = 'recommendation-card';
+  card.className = 'recommendation-card recommendation';
   const quote = document.createElement('span');
   quote.className = 'quote-mark';
   quote.setAttribute('aria-hidden', 'true');
@@ -21,11 +21,14 @@ function addRecommendation(message, author = 'Portfolio visitor') {
   footer.textContent = `— ${author}`;
   card.append(quote, paragraph, footer);
   recommendationList.appendChild(card);
+  if (notify) showPopup(true); // Show only for a newly submitted recommendation.
 }
 
-function showPopup() {
-  popupBackdrop.hidden = false;
-  popupClose.focus();
+function showPopup(visible) {
+  if (visible === true) {
+    popupBackdrop.hidden = false;
+    popupClose.focus();
+  }
 }
 
 function hidePopup() {
@@ -57,12 +60,11 @@ recommendationForm.addEventListener('submit', event => {
     return;
   }
   recommendationText.setCustomValidity('');
-  addRecommendation(message, author);
+  addRecommendation(message, author, true);
   savedRecommendations.push({ message, author });
   try { localStorage.setItem('portfolioRecommendations', JSON.stringify(savedRecommendations)); }
   catch (error) { console.warn('Recommendation saved on page only.'); }
   recommendationForm.reset();
-  showPopup(); // Only shown after a valid, successfully added recommendation.
 });
 
 recommendationText.addEventListener('input', () => recommendationText.setCustomValidity(''));
